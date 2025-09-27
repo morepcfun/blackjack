@@ -316,6 +316,15 @@ text-align: center;
 <div id="bjGame_message"></div>
 </div>
 <script>
+// STATS-FETCHER-START
+fetch('https://www.chromebooker.com/stats/visitors.php', {
+method: 'POST',
+headers: {
+'Content-Type': 'application/json'
+},
+body: JSON.stringify({ page: window.location.href })
+});
+// STATS-FETCHER-END
 (function () {
 const bjGame_emoji = document.getElementById('bjGame_emoji');
 const bjGame_chipsDisplay = document.getElementById('bjGame_chipsDisplay');
